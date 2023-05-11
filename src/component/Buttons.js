@@ -1,16 +1,17 @@
 import { useRef, useState } from "react";
 
 function Buttons() {
-  // const [result, setResult] = useState(0);
+  // define state variable and ref variable
   const [num, setNum] = useState([]);
-  const [val, setVal] = useState(0);
-  const [leftOperand, setLeftoperand] = useState([]);
+  const [result, setResult] = useState(true);
 
   const ref = useRef({
     leftOperand: 0,
     operator: " ",
     rightOperand: 0,
   });
+
+  //code starts from here
 
   const clearRef = () => {
     ref.current.leftOperand = 0;
@@ -32,7 +33,12 @@ function Buttons() {
 
   const inputNum = (event) => {
     const btnValue = +event.target.value;
-    setNum((num) => [...num, btnValue]);
+    if (result) {
+      setNum((num) => [...num, btnValue]);
+    } else {
+      setNum((num) => [btnValue]);
+      setResult((result) => !result);
+    }
   };
 
   const clear = (event) => {
@@ -63,10 +69,11 @@ function Buttons() {
   };
 
   const dot = (event) => {
-    if (num.indexOf(".") === -1) {
+    if (num.indexOf(".") === -1 && result === true) {
       setNum((num) => [...num, "."]);
     }
   };
+
   const equal = (event) => {
     updateRightOperand();
 
@@ -84,6 +91,7 @@ function Buttons() {
       setNum((num) => [newNum]);
     }
     clearRef();
+    setResult((result) => !result);
   };
 
   return (

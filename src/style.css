@@ -29,17 +29,19 @@ body {
 
 .screen {
     margin: 10px auto;
-    height: 50px;
+    height: 60px;
     width: 90%;
-    background-color: rgb(216, 213, 213);
+    background-color: whitesmoke;
     border-radius: 5px;
     padding: 20px;
+    font-size: 19px;
+    text-align: right;
 }
 
 .btns {
     margin: 20px auto;
     height: 300px;
-    padding: 7px;;
+    padding: 8px;;
     width: 90%;
     border-radius: 5px;
     border: 1px solid rgb(52, 49, 49);
@@ -54,4 +56,6 @@ body {
     margin: 3px 5px;
     flex-basis: 60px;
     font-size: 18px;
+    border: 3px solid rgb(164, 95, 95);
+    border-radius: 9px;
 }
