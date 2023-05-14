@@ -24,7 +24,7 @@ body {
     width: 390px;
     border-radius: 10px;
     box-shadow: 9px 5px 9px 4px grey;
-    background-color: rgba(2, 3, 3, 0.636);
+    background-color: rgba(0, 0, 0, 0.763);
 }
 
 .screen {
@@ -51,11 +51,19 @@ body {
     flex-wrap: wrap;
 }
 .btn {
-    background-color: rgb(229, 225, 219);
+    background-color: rgb(163, 163, 162);
     padding: 7px 10px;
     margin: 3px 5px;
     flex-basis: 60px;
     font-size: 18px;
-    border: 3px solid rgb(164, 95, 95);
+    border: 3px solid rgb(255, 255, 255);
     border-radius: 9px;
+}
+
+.btn:active {
+    
+        background-color: rgb(114, 117, 117);
+         translate: 0.7px 1.5px;
+         transform: scale(0.96);
+         transition: all 0.2s ease-in-out;
 }

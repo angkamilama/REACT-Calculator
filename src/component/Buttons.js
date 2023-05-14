@@ -62,6 +62,7 @@ function Buttons() {
     ref.current.operator = "subtract";
     console.log(ref.current);
   };
+
   const addition = (event) => {
     updateLeftOperand();
     ref.current.operator = "add";
@@ -102,7 +103,7 @@ function Buttons() {
           /
         </button>
         <button className="btn" onClick={multiply}>
-          *
+          X
         </button>
         <button className="btn" onClick={minus}>
           -
